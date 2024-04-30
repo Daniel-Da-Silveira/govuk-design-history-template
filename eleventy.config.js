@@ -8,13 +8,16 @@ module.exports = function (eleventyConfig) {
     headingPermalinks: true,
     header: {
       organisationLogo: false,
-      productName: 'Design history',
+      productName: 'Forms designer',
+      logotype: { // Corrected syntax for defining 'logotype'
+        text: 'Defra'
+      }, // Added a comma to separate 'logotype' from other properties
       search: {
         indexPath: '/search.json',
         sitemapPath: '/sitemap'
       }
     }
-  })
+  });
 
   // Passthrough
   eleventyConfig.addPassthroughCopy({ './app/images': '.' })
