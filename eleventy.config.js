@@ -19,6 +19,18 @@ module.exports = function (eleventyConfig) {
     }
   });
 
+  eleventyConfig.addCollection('creating-forms', collection => {
+    return collection.getFilteredByGlob('app/posts/creating-forms/*.md')
+  })
+
+  eleventyConfig.addCollection('managing-forms', collection => {
+    return collection.getFilteredByGlob('app/posts/managing-forms/*.md')
+  })
+
+  eleventyConfig.addCollection('onboarding', collection => {
+    return collection.getFilteredByGlob('app/posts/onboarding/*.md')
+  })
+
   // Passthrough
   eleventyConfig.addPassthroughCopy({ './app/images': '.' })
 
